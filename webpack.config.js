@@ -83,7 +83,8 @@ if (isProduction) {
             port: 4200,
             open: true,
             watchContentBase: true,
-            historyApiFallback: true
+            historyApiFallback: true,
+            disableHostCheck: true
         }
     });
 }
