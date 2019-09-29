@@ -19,16 +19,23 @@ export default class Calculator {
                     this._currentResult += value;
                     break;
                 case Operation.SUB:
+                    this._currentResult -= value;
                     break;
                 case Operation.DIV:
+                    this._currentResult /= value;
                     break;
                 case Operation.MUL:
+                    this._currentResult *= value;
                     break;
 
             }
         } else {
-            // иначе просто делаем выбранное число текущим результатом
-            this._currentResult = value;
+            if (this._currentResult != 0) {
+                this._currentResult = Number(String(this._currentResult) + String(value))
+            } else {
+                // иначе просто делаем выбранное число текущим результатом
+                this._currentResult = value;
+            }
         }
     }
 
