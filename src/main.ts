@@ -1,4 +1,4 @@
-// PART1
+//<editor-fold desc="Fun with functions">
 interface Test {
 
 }
@@ -25,10 +25,10 @@ const typedBar: (value: number, anotherValue: string) => Test = foo;
 
 typedFoo(10, "20");
 typedBar(10, "20");
+//</editor-fold>
 
 
-// PART2
-
+//<editor-fold desc="Interface function/object">
 interface FunctionalInterface {
     (value: number, anotherValue: string): Test;
 }
@@ -54,10 +54,10 @@ let testNumber: number = val.test;
 
 // "какое-то" поле
 let zzzValue: Test = val.zzz;
+//</editor-fold>
 
 
-// PART3
-
+//<editor-fold desc="Generics">
 interface List<T> {
 
     get(i: number): T;
@@ -105,9 +105,10 @@ lst.remove(0);
 
 console.log(lst.size());
 //</editor-fold>
+//</editor-fold>
 
-// ADVANCED
 
+//<editor-fold desc="ADVANCED">
 //<editor-fold desc="http client">
 class HttpClient {
 
@@ -261,6 +262,7 @@ class ShoppingItemService implements DataService<ShoppingItem, number> {
 }
 //</editor-fold>
 
+//<editor-fold desc="Services usage">
 let personService = new PersonService();
 let shoppingService = new ShoppingItemService();
 
@@ -277,4 +279,6 @@ let item = shoppingService.findById(1);
 
 console.log(person);
 console.log(item);
+//</editor-fold>
+//</editor-fold>
 
